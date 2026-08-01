@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For future RN Baluyot, Kristal</title>
+    <style>
+      :root {
+        --pink-1: #fff0f6;
+        --pink-2: #ffd8ea;
+        --pink-3: #ffc0d9;
+        --pink-4: #ff8fc5;
+        --pink-5: #ff5fa0;
+        --text: #6f425d;
+        --white: #ffffff;
+        --shadow: rgba(255, 105, 165, 0.18);
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        min-height: 100%;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, var(--pink-1), var(--pink-2), var(--pink-3));
+        color: var(--text);
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 24px;
+      }
+
+      .container {
+        width: min(700px, 100%);
+        background: rgba(255, 255, 255, 0.55);
+        border: 1px solid rgba(255,255,255,0.8);
+        border-radius: 32px;
+        box-shadow: 0 20px 45px var(--shadow);
+        padding: 32px 24px 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container::before,
+      .container::after {
+        content: "💗";
+        position: absolute;
+        font-size: 28px;
+        opacity: 0.7;
+        animation: float 7s ease-in-out infinite;
+      }
+
+      .container::before { left: 18px; top: 20px; }
+      .container::after { right: 22px; bottom: 24px; animation-delay: 1s; }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-10px) scale(1.1); }
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 8px 16px;
+        background: rgba(255,255,255,0.7);
+        border: 1px solid rgba(255,255,255,0.9);
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--pink-5);
+        margin-bottom: 12px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 6vw, 4rem);
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+        color: #5b2f4f;
+      }
+
+      .cat-box {
+        margin: 24px auto 18px;
+        width: min(100%, 360px);
+        background: rgba(255,255,255,0.6);
+        border-radius: 26px;
+        padding: 12px;
+        border: 1px solid rgba(255,255,255,0.8);
+        box-shadow: 0 12px 30px rgba(255, 120, 180, 0.12);
+      }
+
+      .cat-box img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+      }
+
+      p {
+        margin: 0 auto;
+        max-width: 560px;
+        font-size: 1.08rem;
+        line-height: 1.8;
+      }
+
+      .note {
+        margin-top: 18px;
+        display: inline-block;
+        padding: 14px 18px;
+        background: linear-gradient(135deg, rgba(255, 143, 197, 0.2), rgba(255, 255, 255, 0.7));
+        border-radius: 18px;
+        border: 1px solid rgba(255,255,255,0.8);
+        font-weight: 700;
+        color: #673f5d;
+      }
+
+      .btn-row {
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      button {
+        border: none;
+        border-radius: 999px;
+        padding: 12px 20px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+      }
+
+      .primary {
+        background: linear-gradient(135deg, var(--pink-4), var(--pink-5));
+        color: var(--white);
+        box-shadow: 0 10px 20px rgba(255, 95, 160, 0.25);
+      }
+
+      .secondary {
+        background: rgba(255,255,255,0.7);
+        color: var(--text);
+        border: 1px solid rgba(255,255,255,0.9);
+      }
+
+      @media (max-width: 540px) {
+        .container {
+          padding: 28px 18px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tag">🐾 A tiny reminder for you</div>
+      <h1>Hi tal, rest a little okiee?</h1>
+
+      <div class="cat-box">
+        <img src="https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif" alt="Cute cat meme" />
+      </div>
+
+      <p>
+        I know your academics are stressful right now, and I know you’ve been pushing yourself so hard.
+        Please remember: you deserve rest, peace, and a break from all the pressure.
+      </p>
+
+      <div class="note">You are doing amazing, even when you feel tired :> </div>
+
+      <div class="btn-row">
+        <button class="primary" type="button">Take a break</button>
+        <button class="secondary" type="button">Meowwwww</button>
+      </div>
+    </div>
+  </body>
+</html>
